@@ -1,0 +1,19 @@
+name: Pipeline DevSecOps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: echo "npm install"
+
+      - name: Teste de exemplo
+        run: echo "Executando testes simulados..."
